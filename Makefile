@@ -11,7 +11,7 @@ SRC=$(CURDIR)/src/
 
 
 all: gzstream
-	$(CXX) -o $(BDIR)/add_dosage $(SRC)/add_dosage.cpp $(CPPFLAGS) $(INC) $(LDFLAGS)
+	$(CXX) -o $(BDIR)/add_dosage $(SRC)/add_dosage.cpp $(CPPFLAGS) $(INC) $(LDFLAGS) -lrt
 
 gzstream:
 	cd $(GZPATH) && make && cp libgzstream.a $(LDIR)/ 
